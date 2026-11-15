@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculus Lecture Notes</title>
+<meta name="description" content="Calculus I and II lecture notes (definitions and theorems with proofs) from Ivy Tech Bloomington, following Stewart, Calculus, 7th edition.">
+<style>
+  :root { --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --bg:#fafbfc; --accent:#006648; --card:#fff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: Georgia, "Times New Roman", serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  header { background:#006648; color:#fff; padding:3rem 1.25rem 2.5rem; }
+  .wrap { max-width:880px; margin:0 auto; }
+  header .course { font-family: system-ui, sans-serif; letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; opacity:.8; margin:0; }
+  header h1 { font-size:2.4rem; margin:.3rem 0 .6rem; font-weight:normal; }
+  header p { margin:.2rem 0; opacity:.9; }
+  .btns { margin-top:1.5rem; display:flex; gap:.75rem; flex-wrap:wrap; }
+  .btn { font-family: system-ui, sans-serif; display:inline-block; padding:.65rem 1.1rem; border-radius:6px; text-decoration:none; font-weight:600; font-size:.95rem; }
+  .btn.primary { background:#fff; color:#006648; }
+  .btn.ghost { border:1px solid rgba(255,255,255,.6); color:#fff; }
+  main { padding:2rem 1.25rem 3rem; }
+  .guide { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:1rem 1.25rem; margin-bottom:2rem; font-size:.97rem; }
+  .guide h2 { font-size:1.05rem; margin:0 0 .4rem; }
+  .key { display:flex; flex-wrap:wrap; gap:.4rem .9rem; margin:.6rem 0 0; padding:0; list-style:none; font-family:system-ui,sans-serif; font-size:.85rem; }
+  .key li::before { content:""; display:inline-block; width:.8em; height:.8em; border-radius:2px; margin-right:.35em; vertical-align:-.05em; background:var(--c); }
+  .chapter { background:var(--card); border:1px solid var(--line); border-radius:8px; margin-bottom:1.25rem; overflow:hidden; }
+  .chapter h2 { margin:0; font-size:1.25rem; font-weight:normal; border-bottom:1px solid var(--line); }
+  .chapter h2 a { display:block; padding:.9rem 1.25rem; color:var(--ink); text-decoration:none; }
+  .chapter h2 a:hover { background:#eef6f2; }
+  .cl { font-family:system-ui,sans-serif; font-size:.78rem; text-transform:uppercase; letter-spacing:.07em; color:var(--accent); display:block; }
+  ol { list-style:none; margin:0; padding:.35rem 0; }
+  li a { display:flex; gap:.9rem; padding:.42rem 1.25rem; text-decoration:none; color:var(--ink); }
+  li a:hover { background:#eef6f2; }
+  li a:hover .st { color:var(--accent); text-decoration:underline; }
+  .sn { font-family:system-ui,sans-serif; font-variant-numeric:tabular-nums; color:var(--muted); min-width:2.4rem; font-size:.92rem; padding-top:.08rem; }
+  .st { flex:1; }
+  .pg { font-family:system-ui,sans-serif; color:var(--muted); font-size:.8rem; white-space:nowrap; padding-top:.15rem; }
+  .reviews { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin-bottom:2rem; }
+  .review { background:var(--card); border:1px solid var(--line); border-left:4px solid #006648; border-radius:8px; padding:1rem 1.25rem; text-decoration:none; color:var(--ink); display:block; }
+  .review:hover { background:#eef6f2; }
+  .review .cl { margin-bottom:.15rem; }
+  .review strong { font-size:1.15rem; font-weight:normal; display:block; }
+  .review span.d { color:var(--muted); font-size:.92rem; }
+  .sechead { font-family:system-ui,sans-serif; font-size:.85rem; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); margin:0 0 .6rem; font-weight:600; }
+  footer { text-align:center; color:var(--muted); font-size:.85rem; padding:0 1rem 2.5rem; font-family:system-ui,sans-serif; }
+  @media (max-width:560px) { header h1 { font-size:1.8rem; } .pg { display:none; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="course"><a href="https://rpennell-math.github.io/" style="color:#fff;text-decoration:none;opacity:.85">&larr; All courses</a></p>
+    <p class="course">Calculus I &amp; II · Ivy Tech Community College · Bloomington</p>
+    <h1>Calculus Lecture Notes</h1>
+    <p>Definitions and theorems with proofs, following Stewart, <em>Calculus</em>, 7th edition</p>
+    <p>Prepared by Ryan Pennell</p>
+    <div class="btns">
+      <a class="btn primary" href="Calculus-Lecture-Notes.pdf">Open the full notes (PDF)</a>
+      <a class="btn ghost" href="Calculus-Lecture-Notes.pdf" download>Download PDF</a>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <h2 class="sechead">Lecture notes by section</h2>
+  <div class="guide">
+    <h2>How to use these notes</h2>
+    These notes cover Calculus I and Calculus II. Click any topic below to jump straight to it in the PDF. The opening pages (<a href="Calculus-Lecture-Notes.pdf#page=2" style="color:var(--accent)">About these notes</a>) explain how the notes are organized.
+  </div>
+      <section class="chapter">
+        <h2><a href="Calculus-Lecture-Notes.pdf#page=6"><span class="cl">Sections 1.4–1.8</span> Limits and Continuity</a></h2>
+        <ol>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=6"><span class="sn"></span><span class="st">The Tangent and Velocity Problems</span><span class="pg">p.&nbsp;6</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=6"><span class="sn"></span><span class="st">The Limit of a Function</span><span class="pg">p.&nbsp;6</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=7"><span class="sn"></span><span class="st">Calculating Limits Using the Limit Laws</span><span class="pg">p.&nbsp;7</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=10"><span class="sn"></span><span class="st">The Precise Definition of a Limit</span><span class="pg">p.&nbsp;10</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=11"><span class="sn"></span><span class="st">Continuity</span><span class="pg">p.&nbsp;11</span></a></li>
+        </ol>
+      </section>
+      <section class="chapter">
+        <h2><a href="Calculus-Lecture-Notes.pdf#page=15">Derivatives</a></h2>
+        <ol>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=15"><span class="sn"></span><span class="st">Derivatives and Rates of Change</span><span class="pg">p.&nbsp;15</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=16"><span class="sn"></span><span class="st">The Derivative as a Function</span><span class="pg">p.&nbsp;16</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=17"><span class="sn"></span><span class="st">Differentiation Formulas</span><span class="pg">p.&nbsp;17</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=20"><span class="sn"></span><span class="st">Derivatives of Trigonometric Functions</span><span class="pg">p.&nbsp;20</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=21"><span class="sn"></span><span class="st">The Chain Rule</span><span class="pg">p.&nbsp;21</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=22"><span class="sn"></span><span class="st">Implicit Differentiation</span><span class="pg">p.&nbsp;22</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=22"><span class="sn"></span><span class="st">Rates of Change in the Natural and Social Sciences</span><span class="pg">p.&nbsp;22</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=23"><span class="sn"></span><span class="st">Related Rates</span><span class="pg">p.&nbsp;23</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=23"><span class="sn"></span><span class="st">Linear Approximations and Differentials</span><span class="pg">p.&nbsp;23</span></a></li>
+        </ol>
+      </section>
+      <section class="chapter">
+        <h2><a href="Calculus-Lecture-Notes.pdf#page=24">Applications of Differentiation</a></h2>
+        <ol>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=24"><span class="sn"></span><span class="st">Maximum and Minimum Values</span><span class="pg">p.&nbsp;24</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=26"><span class="sn"></span><span class="st">The Mean Value Theorem</span><span class="pg">p.&nbsp;26</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=27"><span class="sn"></span><span class="st">How Derivatives Affect the Shape of a Graph</span><span class="pg">p.&nbsp;27</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=29"><span class="sn"></span><span class="st">Limits at Infinity; Horizontal Asymptotes</span><span class="pg">p.&nbsp;29</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=30"><span class="sn"></span><span class="st">Summary of Curve Sketching</span><span class="pg">p.&nbsp;30</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=31"><span class="sn"></span><span class="st">Graphing with Calculus and Calculators</span><span class="pg">p.&nbsp;31</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=31"><span class="sn"></span><span class="st">Optimization Problems</span><span class="pg">p.&nbsp;31</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=31"><span class="sn"></span><span class="st">Newton&#x27;s Method</span><span class="pg">p.&nbsp;31</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=32"><span class="sn"></span><span class="st">Antiderivatives</span><span class="pg">p.&nbsp;32</span></a></li>
+        </ol>
+      </section>
+      <section class="chapter">
+        <h2><a href="Calculus-Lecture-Notes.pdf#page=34">Integrals</a></h2>
+        <ol>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=34"><span class="sn"></span><span class="st">Areas and Distances</span><span class="pg">p.&nbsp;34</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=35"><span class="sn"></span><span class="st">The Definite Integral</span><span class="pg">p.&nbsp;35</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=39"><span class="sn"></span><span class="st">The Fundamental Theorem of Calculus</span><span class="pg">p.&nbsp;39</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=40"><span class="sn"></span><span class="st">Indefinite Integrals and the Net Change Theorem</span><span class="pg">p.&nbsp;40</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=41"><span class="sn"></span><span class="st">The Substitution Rule</span><span class="pg">p.&nbsp;41</span></a></li>
+        </ol>
+      </section>
+      <section class="chapter">
+        <h2><a href="Calculus-Lecture-Notes.pdf#page=43">Inverse Functions: Exponential, Logarithmic, and Inverse Trigonometric Functions</a></h2>
+        <ol>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=43"><span class="sn">6.1</span><span class="st">Inverse Functions</span><span class="pg">p.&nbsp;43</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=45"><span class="sn">6.2*</span><span class="st">The Natural Logarithmic Function</span><span class="pg">p.&nbsp;45</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=46"><span class="sn">6.3*</span><span class="st">The Natural Exponential Function</span><span class="pg">p.&nbsp;46</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=48"><span class="sn">6.4*</span><span class="st">General Logarithmic and Exponential Functions</span><span class="pg">p.&nbsp;48</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=49"><span class="sn">6.5</span><span class="st">Exponential Growth and Decay</span><span class="pg">p.&nbsp;49</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=50"><span class="sn">6.6</span><span class="st">Inverse Trigonometric Functions</span><span class="pg">p.&nbsp;50</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=52"><span class="sn">6.7</span><span class="st">Hyperbolic Functions</span><span class="pg">p.&nbsp;52</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=54"><span class="sn">6.8</span><span class="st">Indeterminate Forms and l&#x27;Hôpital&#x27;s Rule</span><span class="pg">p.&nbsp;54</span></a></li>
+        </ol>
+      </section>
+      <section class="chapter">
+        <h2><a href="Calculus-Lecture-Notes.pdf#page=56">Techniques of Integration</a></h2>
+        <ol>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=56"><span class="sn"></span><span class="st">Integration by Parts</span><span class="pg">p.&nbsp;56</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=57"><span class="sn"></span><span class="st">Trigonometric Integrals</span><span class="pg">p.&nbsp;57</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=59"><span class="sn"></span><span class="st">Trigonometric Substitution</span><span class="pg">p.&nbsp;59</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=60"><span class="sn"></span><span class="st">Integration of Rational Functions by Partial Fractions</span><span class="pg">p.&nbsp;60</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=63"><span class="sn"></span><span class="st">Strategy for Integration</span><span class="pg">p.&nbsp;63</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=64"><span class="sn"></span><span class="st">Integration Using Tables and Computer Algebra Systems</span><span class="pg">p.&nbsp;64</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=64"><span class="sn"></span><span class="st">Approximate Integration</span><span class="pg">p.&nbsp;64</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=66"><span class="sn"></span><span class="st">Improper Integrals</span><span class="pg">p.&nbsp;66</span></a></li>
+        </ol>
+      </section>
+      <section class="chapter">
+        <h2><a href="Calculus-Lecture-Notes.pdf#page=69">Infinite Sequences and Series</a></h2>
+        <ol>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=69"><span class="sn"></span><span class="st">Sequences</span><span class="pg">p.&nbsp;69</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=72"><span class="sn"></span><span class="st">Series</span><span class="pg">p.&nbsp;72</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=74"><span class="sn"></span><span class="st">The Integral Test and Estimates of Sums</span><span class="pg">p.&nbsp;74</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=75"><span class="sn"></span><span class="st">The Comparison Tests</span><span class="pg">p.&nbsp;75</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=76"><span class="sn"></span><span class="st">Alternating Series</span><span class="pg">p.&nbsp;76</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=77"><span class="sn"></span><span class="st">Absolute Convergence and the Ratio and Root Tests</span><span class="pg">p.&nbsp;77</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=79"><span class="sn"></span><span class="st">Strategy for Testing Series</span><span class="pg">p.&nbsp;79</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=79"><span class="sn"></span><span class="st">Power Series</span><span class="pg">p.&nbsp;79</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=81"><span class="sn"></span><span class="st">Representations of Functions as Power Series</span><span class="pg">p.&nbsp;81</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=82"><span class="sn"></span><span class="st">Taylor and Maclaurin Series</span><span class="pg">p.&nbsp;82</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=85"><span class="sn"></span><span class="st">Applications of Taylor Polynomials</span><span class="pg">p.&nbsp;85</span></a></li>
+        </ol>
+      </section>
+      <section class="chapter">
+        <h2><a href="Calculus-Lecture-Notes.pdf#page=86">Vectors and the Geometry of Space</a></h2>
+        <ol>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=86"><span class="sn"></span><span class="st">Three-Dimensional Coordinate Systems</span><span class="pg">p.&nbsp;86</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=87"><span class="sn"></span><span class="st">Vectors</span><span class="pg">p.&nbsp;87</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=88"><span class="sn"></span><span class="st">The Dot Product</span><span class="pg">p.&nbsp;88</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=90"><span class="sn"></span><span class="st">The Cross Product</span><span class="pg">p.&nbsp;90</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=93"><span class="sn"></span><span class="st">Equations of Lines and Planes</span><span class="pg">p.&nbsp;93</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=95"><span class="sn"></span><span class="st">Cylinders and Quadric Surfaces</span><span class="pg">p.&nbsp;95</span></a></li>
+        </ol>
+      </section>
+      <section class="chapter">
+        <h2><a href="Calculus-Lecture-Notes.pdf#page=97"><span class="cl">Appendixes</span> Review and Reference Topics</a></h2>
+        <ol>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=97"><span class="sn"></span><span class="st">Numbers, Inequalities, and Absolute Values</span><span class="pg">p.&nbsp;97</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=101"><span class="sn"></span><span class="st">Coordinate Geometry and Lines</span><span class="pg">p.&nbsp;101</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=103"><span class="sn"></span><span class="st">Graphs of Second-Degree Equations</span><span class="pg">p.&nbsp;103</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=104"><span class="sn"></span><span class="st">Trigonometry</span><span class="pg">p.&nbsp;104</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=106"><span class="sn"></span><span class="st">Sigma Notation</span><span class="pg">p.&nbsp;106</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=107"><span class="sn"></span><span class="st">Proofs of Theorems</span><span class="pg">p.&nbsp;107</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=110"><span class="sn"></span><span class="st">Graphing Calculators and Computers</span><span class="pg">p.&nbsp;110</span></a></li>
+          <li><a href="Calculus-Lecture-Notes.pdf#page=110"><span class="sn"></span><span class="st">Complex Numbers</span><span class="pg">p.&nbsp;110</span></a></li>
+        </ol>
+      </section>
+</main>
+<footer>Calculus Lecture Notes · Prepared by Ryan Pennell, Ivy Tech Bloomington</footer>
+</body>
+</html>
